@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kongming.springtest.springhello.dao.WebDao">
+    <!--配置列表页数据映射-->
+    <resultMap id="WebPoResultMap" type="com.kongming.springtest.springhello.domain.po.WebPo">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+
+    <!--配置详情-->
+<!--    <select id="webList" resultMap="WebPoResultMap" parameterType="map">-->
+<!--        SELECT *-->
+<!--        FROM t_spring_test-->
+<!--        <where>-->
+<!--            `status` = 'thread_audit_status'-->
+<!--        </where>-->
+
+<!--    </select>-->
+
+    <!--配置详情-->
+    <select id="webList" resultMap="WebPoResultMap" parameterType="map">
+        SELECT *
+        FROM t_spring_test
+    </select>
+
+</mapper>
